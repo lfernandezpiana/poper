@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Poper Stand Up</h1>
+  <p>Intento de mejorar la pagina de Poper. Pasamos de un sitio estatico a uno dinamico</p>
+  <h2>Dynamic content</h2>
+  <p>Poper tiene los siguientes integrantes:</p>
+  <ul>
+    <li><strong>Nombre:</strong> {{ poperos_nombre }}</li>
+    <li><strong>Apellido:</strong> {{ poperos_apellido }}</li>
+    <li><strong>Especialidad:</strong> {{ poperos_especialidad }}</li>
+    <li><strong>Bio:</strong> {{ poperos_bio }}</li>
+  </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}
