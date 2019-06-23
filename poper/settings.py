@@ -20,7 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pui^mcn7qt9pun4o7a5&8w#uepc1!8_$f$*$)crnmk6z$wqk2!'
+#Read secret key from a file
+with open('/home/lucas/MEGAsync/Poper/secret.txt') as f:
+    SECRET_KEY = f.read().strip()
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
